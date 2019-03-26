@@ -1,0 +1,14 @@
+@import '../movie-item/movie-item-template.wxss';
+.grid-container{
+  /* 上 右 下 左 */
+  margin-top: 40rpx;
+  margin-left: 6rpx;
+  /* 上滑加载更多，需要给定上滑界限高度 */
+  height: 1300rpx;
+}
+
+.single-container{
+  float: left;
+  margin-bottom: 40rpx;
+  height: 420rpx;
+}

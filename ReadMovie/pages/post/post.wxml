@@ -1,0 +1,27 @@
+<!--pages/post/post.wxml-->
+<import src='post-item/post-item-template.wxml'/>
+<view>
+  <!-- 滑块视图容器：显示面板指示点，自动切换，切换时间间隔3s -->
+  <swiper catchtap='onSwiperTap' indicator-dots='true' autoplay='true' interval='3000'>
+    <swiper-item>
+      <!-- data-postid：自定义属性postid -->
+      <image src='/images/wx.png' data-postid='3'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/vr.png' data-postid='4'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='/images/iqiyi.png' data-postid='5'></image>
+    </swiper-item>
+  </swiper>
+
+  <!--使用block块，for循环遍历post_content数组，获取每一个post_content对象item
+      这里wx:key是无用的，只是为了去除警告信息-->
+  <block wx:for='{{post_key}}' wx:for-item='item' wx:key='key'>
+    <!-- data-postid:自定义属性postid，以"data-"开头 -->
+    <view catchtap='onPostTap' data-postid='{{item.postId}}'>
+      <!-- data属性：向模板中传值:这里使用...item，将js对象{}展开，在template中就不需要item.avatar，直接使用属性名即可 -->
+      <template is='postItem' data='{{...item}}'/>
+    </view>
+  </block>  
+</view>

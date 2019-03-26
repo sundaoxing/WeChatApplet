@@ -1,0 +1,14 @@
+<!--pages/welcome/welcome.wxml-->
+<view class='userinfo'>
+  <image class='userinfo-avatar' src='/images/axin.jpg'></image>
+  <text class='userinfo-nickname'>Hello 阿信</text>
+  <!-- bintap事件绑定函数名 
+    注意：冒泡事件
+    父节点事件响应，子节点事件不一定响应
+    子节点事件响应，父节点事件也响应
+    如果只想要子节点事件响应，使用catchtap='事件响应函数名'
+  -->
+  <view class='usermotto-container' bindtap='onTap'>
+    <text class='usermotto'>开启小程序之旅</text>
+  </view>
+</view>

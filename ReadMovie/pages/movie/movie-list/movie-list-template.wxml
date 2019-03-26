@@ -1,0 +1,23 @@
+<!-- 电影列表模板（横向排版） -->
+<!-- 引入电影模板 -->
+<import src='../movie-item/movie-item-template.wxml' />
+<template name='movieList'>
+  <view class='movie-list-container'>
+    <view class='inner-container'>
+      <view class='movie-head'>
+        <text class='slogan'>{{name}}</text>
+        <view class='more'>
+          <!-- data-category:自定义属性，绑定当前分类 -->
+          <text class='more-text' catchtap='onMoreTap' data-category='{{name}}'>更多</text>
+          <image class='more-img' src='/images/icon/arrow-right.png'></image>
+        </view>
+      </view>
+      <view class='movies-container'>
+        <block wx:for='{{movies}}' wx:for-item='movie' wx:key='key'>
+          <!-- 电影模板：...movie:展开movie对象 -->
+          <template is='movieItem' data='{{...movie}}'/>
+        </block>
+      </view>
+    </view>
+  </view>
+</template>

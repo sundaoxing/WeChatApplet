@@ -1,0 +1,14 @@
+<!-- 评分星星组件模板-->
+<template name='star'>
+  <view class='star-container'>
+    <view class='star'>
+      <!-- star:[1,1,1,0,0]
+        1：代表星星有色   0：代表星星无色-->
+      <block wx:for='{{star}}' wx:for-item='i' wx:key='key'>
+        <image wx:if='{{i}}' src='/images/icon/star.png'></image>
+        <image wx:else src='/images/icon/none-star.png'></image>
+      </block>
+    </view>
+    <text class='star-score'>{{average}}</text>
+  </view>
+</template>

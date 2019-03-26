@@ -1,0 +1,14 @@
+<!-- 电影宫格排版模板 -->
+<!-- 引入电影模板 -->
+<import src='../movie-item/movie-item-template.wxml' />
+<template name='movieGrid'>
+  <!-- 纵向滚动 -->
+  <scroll-view class='grid-container' scroll-y='true' scroll-x='false' bindscrolltolower='onScrollLower'>
+    <block wx:for='{{movies}}' wx:for-item='movie' wx:key='key'>
+      <view class='single-container'>
+        <!-- 电影模板：...movie:展开movie对象 -->
+        <template is='movieItem' data='{{...movie}}' />
+      </view>
+    </block>
+  </scroll-view>
+</template>

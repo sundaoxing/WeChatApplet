@@ -1,0 +1,21 @@
+<view class='container'>
+  <text class='title'>{{postDetail.title}}</text>
+  <view class='author-date'>
+    <image class='avatar' src='{{postDetail.avatar}}'></image>
+    <text class='author'>{{postDetail.author}}</text>
+    <text class='date'>{{postDetail.dateTime}}</text>
+  </view>
+  <image class='head-image' src='{{postDetail.headImgSrc}}'></image>
+  <!-- 三目运算符：根据音乐播放条件，使用不同的音乐图标 -->
+  <image class='audio' catchtap='onPlayTap' src="{{isPlaying? '/images/music/music-stop.png': '/images/music/music-start.png'}}"></image>
+  <view class='tool'>
+    <view class='circle-img'>
+       <!-- wx:if-else:根据收藏条件，使用不同的收藏图标 -->
+      <image wx:if='{{collected}}' catchtap='onCollectTap' src='../../../images/icon/collection.png'></image>
+      <image wx:else catchtap='onCollectTap' src='../../../images/icon/collection-anti.png'></image>
+      <image class='share-img' src='../../../images/icon/share-anti.png'></image>
+    </view>
+    <view class='horizon'></view>
+  </view>
+  <text class='detail'>{{postDetail.detail}}</text>
+</view>

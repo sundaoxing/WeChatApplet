@@ -1,0 +1,10 @@
+<!-- 电影组件模板（一部电影） -->
+<import src='../star/star-template.wxml'/>
+<template name='movieItem'>
+  <view class='movie-container' catchtap='onMovieDetailTap' data-movieid='{{movieId}}'>
+    <image class='movie-img' src='{{coverImgUrl}}'></image>
+    <text class='movie-title'>{{title}}</text>
+    <!-- data数据绑定：重新定义一个js对象{star:star,average:average} -->
+    <template is='star' data='{{star:star, average:average}}'/>
+  </view>
+</template>

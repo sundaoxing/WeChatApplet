@@ -1,0 +1,103 @@
+/* pages/post/post-detail/post-detail.wxss */
+.container{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.title{
+  width: 95%;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  font-size: 32rpx;
+  font-weight: 560;
+  margin-top: 30rpx;
+  /* 文字间间距 */
+  letter-spacing: 1px;
+  color: #000;
+}
+
+.author-date{
+  width: 100%;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.avatar{
+  height: 90rpx;
+  width: 90rpx;
+  /* 垂直对齐 */
+  vertical-align: middle;
+}
+
+.author{
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-left: 20rpx;
+  vertical-align: middle;
+  color: #000;
+}
+
+.date{
+  font-size: 24rpx;
+  margin-left: 30rpx;
+  vertical-align: middle;
+  color: #999;
+}
+
+.head-image{
+  width: 99%;
+  height: 460rpx;
+}
+
+.audio{
+  width: 102rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -51rpx;
+  top: 360rpx;
+  /* 透明度 */
+  opacity: 0.8;
+}
+
+.tool{
+  margin-top: 20rpx;
+}
+
+.circle-img{
+  float: right;
+  vertical-align: middle;
+}
+
+.circle-img Image{
+  width: 90rpx;
+  height: 90rpx;
+}
+.share-img{
+  margin-left: 30rpx;
+}
+
+.horizon{
+  width: 660rpx;
+  height: 1px;
+  background-color: #e5e5e5;
+  vertical-align: middle;
+  position: relative;
+  top: 46rpx;
+  margin: 0 auto;
+  /* 设置元素的堆叠顺序 */
+  z-index:-99;
+}
+
+.detail{
+  font-size: 30rpx;
+  margin-left: 35rpx;
+  margin-top: 20rpx;
+  margin-right: 32rpx;
+  /* 行间距 */
+  line-height: 44rpx;
+  /* 文字间间距 */
+  letter-spacing: 1px;
+}

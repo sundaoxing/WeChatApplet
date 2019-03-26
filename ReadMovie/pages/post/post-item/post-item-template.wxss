@@ -1,0 +1,84 @@
+.post-container{
+  /* 设置为弹性盒子 */
+  display:flex;
+   /* 设置为列对齐（垂直方向）*/
+  flex-direction: column;
+  /* 上 右 下 左 margin: 80rpx 30rpx 40rpx 40rpx; */
+  margin-top: 40rpx;
+  margin-right: 60rpx;
+  margin-left: 60rpx;
+  background-color: #fff;
+  /* 设置横线 */
+  border-top: 1px solid #ededed;
+  padding-bottom: 5px;
+}
+
+.post-author-date{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin-left: 10rpx;
+}
+
+.post-author{
+  width: 64rpx;
+  height: 64rpx;
+  /* 垂直居中 */
+  vertical-align: middle;
+}
+
+.post-date{
+  margin-left: 20rpx;
+  /* 垂直居中 */
+  vertical-align: middle;
+  margin-bottom: 5px;
+  font-size: 26rpx;
+}
+
+.post-title{
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.post-image{
+  margin-left: 16px;
+  width: 100%;
+  height: 400rpx;
+  margin: auto 0;
+}
+
+.post-content{
+  width: 94%;
+  color: #666;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+  margin-left: 28rpx;
+  /* 设置文字的间距 */
+  letter-spacing: 2rpx;
+  /* 多行元素的间距（行间距） */
+  line-height: 40rpx;
+}
+
+.post-like{
+  font-size: 13px;
+  flex-direction: row;
+  line-height: 16px;
+  margin-left: 10px;
+}
+
+.post-like-image{
+  height: 34rpx;
+  width: 34rpx;
+  margin-right: 8px;
+  /* 垂直居中 */
+  vertical-align: middle;
+}
+
+.post-like-font{
+  /* 垂直居中 */
+  vertical-align: middle;
+  margin-right: 20px;
+}
